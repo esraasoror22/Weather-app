@@ -5,6 +5,7 @@ app = Flask(__name__)
 APIKEY = "54e31d4e1b7847cdb88164434251306"
 BaseURL= "http://api.weatherapi.com/v1/current.json"
 
+#api url
 #https://www.weatherapi.com/api-explorer.aspx
 #http://api.weatherapi.com/v1/current.json?key=54e31d4e1b7847cdb88164434251306&q=Egypt&aqi=no
 @app.route("/", methods=["GET", "POST"])
