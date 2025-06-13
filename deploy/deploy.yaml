@@ -18,7 +18,7 @@ spec:
     spec:  
      containers:
         - name: c1
-          image: esraaelhasanen/weather-app:v20250613234030
+          image: esraaelhasanen/weather-app:v20250613234957
           ports:
            - containerPort: 5000
            
