@@ -60,8 +60,10 @@ jobs:
           git config --global user.email "<>"
           git config --global user.name "GitHub Actions Bot"
           git add deploy/deploy.yaml
+
           git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
           git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/esraasoror22/Weather-app.git
+           git push origin main
 
 
 
