@@ -47,7 +47,7 @@ jobs:
       
       - name: Push to dockerhub
         run: |
-          docker push esraaelhasanen/Weather-app:${{ env.VERSION }}
+          docker push esraaelhasanen/weather-app:${{ env.VERSION }}
 
         
       
