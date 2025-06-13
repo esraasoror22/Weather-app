@@ -43,7 +43,7 @@ jobs:
       
       - name: Build Docker image
         run: |
-          docker build . -t esraaelhasanen/Weather-app:${{ env.VERSION }}
+          docker build . -t esraaelhasanen/weather-app:${{ env.VERSION }}
       
       - name: Push to dockerhub
         run: |
