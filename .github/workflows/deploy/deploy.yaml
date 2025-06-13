@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+  labels:
+    stage: DEV
+
+spec:
+  selector: 
+    matchLabels:
+      stage: DEV
+  
+  repliacs: 2
+  template:
+    metadata:
+      labels:
+        stage: DEV
+    spec:  
+     containers:
+        - name: c1
+          image: esraaelhasanen/weather-app:v1
+          ports:
+           - containerPort: 5000
+           
+      
+      
