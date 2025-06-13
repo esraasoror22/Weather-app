@@ -44,6 +44,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build . -t esraaelhasanen/weather-app:${{ env.VERSION }}
+          docker image ls
       
       - name: Push to dockerhub
         run: |
