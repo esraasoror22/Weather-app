@@ -63,7 +63,7 @@ jobs:
 
           git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
           git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/esraasoror22/Weather-app.git
-           git push origin main
+          git push origin main
 
 
 
