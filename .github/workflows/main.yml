@@ -52,7 +52,8 @@ jobs:
       
       - name: Update Manifest
         run: |
-          sed -i "s|image: esraaelhasanen/weather-app:*|image: esraaelhasanen/weather-app:${{ env.VERSION }}|g" deploy/deploy.yaml
+
+          sed -i "s|image: esraaelhasanen/weather-app:.*|image: esraaelhasanen/weather-app:${{ env.VERSION }}|g" deploy/deploy.yaml
           cat deploy/deploy.yaml
       
       - name: update image on repo 
