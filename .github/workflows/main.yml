@@ -49,6 +49,21 @@ jobs:
       - name: Push to dockerhub
         run: |
           docker push esraaelhasanen/weather-app:${{ env.VERSION }}
+      
+      - name: Update Manifest
+        run: |
+          sed -i "s|image: esraaelhasanen/weather-app:*|image: esraaelhasanen/weather-app:${{ env.VERSION }}|g" deploy/deploy.yaml
+          cat deploy/deploy.yaml
+      
+      - name: update image on repo 
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "GitHub Actions Bot"
+          git add deploy/deploy.yaml
+          git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
+          git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/esraasoror22/Weather-app.git
+
+
 
         
       
