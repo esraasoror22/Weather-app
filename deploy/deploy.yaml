@@ -10,7 +10,7 @@ spec:
     matchLabels:
       stage: DEV
   
-  repliacs: 3
+  repliacs: 5
   template:
     metadata:
       labels:
